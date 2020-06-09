@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おまじない</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="calc.css">
+    <link rel="script" href="clock.js">
+</head>
+
+<body>
+
+<div class="side">
+
+  <div class="darkbox">
+      <div>
+        <p class="side-title">Time</p>
+        <div class="gadgett">
+            <!-- Date -->
+          <div id="clock_date"></div>
+              <!-- Time -->
+          <div id="clock_time"></div>
+            <script type="text/javascript" src="clock.js"></script>
+        </div>
+
+        <div class="tokyo-weather">
+          <p class="side-title">東京</p>
+          <script type="weatherTokyo" src="weatherTokyo.js">
+
+          </script>
+        </div>
+
+      </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="mami">
+    <h1>mamisankawaii</h1>
+    <p>    ξ(✿ ＞◡❛)ξ▄︻▇▇〓〓ティロ・フィナーレ！</p>
+    <div class="qbimg">
+      <img src="QB.png" alt="">
+    </div>
+    <div class="qbimg">
+      <img src="img_01.png" alt="">
+    </div>
+  </div>
+  <div class="mami-box">
+    <p>とても眠いです</p>
+    <p>可愛い女の子が好きです</p>
+  </div>
+
+  <div class="calcDesu">
+    <div class = "container">
+<!--      計算結果を出力する場所-->
+      <div id = "output_total" class="output ">0</div>
+<!--      計算過程を出力する -->
+      <div id = "output_sub" class="output active">0</div>
+<!--      ボタンを配置する場所-->
+      <div class = 'input'>
+          <section class = 'row'>
+            <div id = "clear">C</div>
+            <div class = "num_bth"></div>
+            <div class = "num_bth" id="bs">BS</div>
+            <div class = "num_bth cal" data-index-id= '/'>÷</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 9 >9</div>
+            <div class = "num_bth one_nine " data-index-id = 8 >8</div>
+            <div class = "num_bth one_nine " data-index-id = 7 >7</div>
+            <div class = "num_bth cal" data-index-id = '*'>×</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 6 >6</div>
+            <div class = "num_bth one_nine " data-index-id = 5 >5</div>
+            <div class = "num_bth one_nine " data-index-id = 4 >4</div>
+            <div class = "num_bth cal" data-index-id = '-'>－</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 3 >3</div>
+            <div class = "num_bth  one_nine" data-index-id = 2 >2</div>
+            <div class = "num_bth  one_nine" data-index-id = 1 >1</div>
+            <div class = "num_bth cal" data-index-id = '+'>+</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth" data-index-id = 00 >00</div>
+            <div class = "num_bth" id="zero" data-index-id = 0 >0</div>
+            <div class = "num_bth" id="point" data-index-id = . >.</div>
+            <div id = 'equal_btn'>=</div>
+          </section>
+      </div>
+    </div>
+    <script src="calc.js"></script>
+  </div>
+  <div class="thankYou">
+    <div class="mami-box">
+      <p>参考にさせて頂きました</p>
+      <a href="https://qiita.com/rikimaru914/items/b4076b2673014034076c">電卓</a>
+      <a href="https://qiita.com/delph/items/9c702cdf03a5679d93e0">時計</a>
+    </div>
+  </div>
+
+  <div class="omaginai">
+
+  </div>
+
+</div>
+
+<div class="footer">
+</div>
+
+
+
+</body>
+</html>

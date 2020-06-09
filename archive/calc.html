@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>電卓</title>
+    <link rel="stylesheet" href="calc.css">
+  </head>
+  <body>
+    <div class = "container">
+<!--      計算結果を出力する場所-->
+      <div id = "output_total" class="output ">0</div>
+<!--      計算過程を出力する -->
+      <div id = "output_sub" class="output active">0</div>
+<!--      ボタンを配置する場所-->
+      <div class = 'input'>
+          <section class = 'row'>
+            <div id = "clear">C</div>
+            <div class = "num_bth"></div>
+            <div class = "num_bth" id="bs">BS</div>
+            <div class = "num_bth cal" data-index-id= '/'>÷</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 9 >9</div>
+            <div class = "num_bth one_nine " data-index-id = 8 >8</div>
+            <div class = "num_bth one_nine " data-index-id = 7 >7</div>
+            <div class = "num_bth cal" data-index-id = '*'>×</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 6 >6</div>
+            <div class = "num_bth one_nine " data-index-id = 5 >5</div>
+            <div class = "num_bth one_nine " data-index-id = 4 >4</div>
+            <div class = "num_bth cal" data-index-id = '-'>－</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 3 >3</div>
+            <div class = "num_bth  one_nine" data-index-id = 2 >2</div>
+            <div class = "num_bth  one_nine" data-index-id = 1 >1</div>
+            <div class = "num_bth cal" data-index-id = '+'>+</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth" data-index-id = 00 >00</div>
+            <div class = "num_bth" id="zero" data-index-id = 0 >0</div>
+            <div class = "num_bth" id="point" data-index-id = . >.</div>
+            <div id = 'equal_btn'>=</div>
+          </section>
+      </div>
+    </div>
+    <script src="calc.js"></script>
+  </body>
+</html>

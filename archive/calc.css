@@ -1,0 +1,45 @@
+.container {
+  width: 200px;
+  margin: 50px auto;
+  border: 2px solid black;
+}
+
+.output {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: right;
+  padding: 5px;
+  margin-bottom: 5px;
+  border:2px solid black;
+  box-sizing: border-box;
+  display:none;
+}
+
+.output.active {
+  display:block;
+}
+
+.input {
+  width:200px;
+  border: 2px solid black;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+  width: 200px;
+}
+/*rowの範囲がわかりやすいように赤の枠を作っています。*/
+
+.num_bth, #clear, #equal_btn{
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 30%;
+  background: lightgray;
+  cursor: pointer;
+  margin: 5px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>お天気情報取得</title>
+<style>
+body{
+	background: #ddd;
+	font-family: 'メイリオ', Osaka;
+}
+h1{
+	border-bottom: solid 1px #000;
+}
+#result{
+	font-size:24px;
+}
+</style>
+<script>
+// 取得する地域
+var city = "Mito,jp";
+
+var httpObj = new XMLHttpRequest();
+// openweathermapからJSONデータ取得
+httpObj.open("GET", "http://api.openweathermap.org/data/2.5/forecast/daily/?units=metric&q=" + city + "&cnt=7", true);
+httpObj.onload = function(){
+	var data = JSON.parse(this.responseText);	// JSON形式データを変換
+	var cityName = data.city.name;	// 都市名を取得
+	// データ整形
+	var day = ["今日", "明日"];
+	var tag = "";
+	tag += "<p>" + cityName + "</p>";
+	tag += "<table>";
+	for(var i=0; i<2; i++){
+		var tempMax = Math.floor(Number(data.list[i].temp.max)*10)/10 + " ℃";	// 最高気温
+		var tempMin = Math.floor(Number(data.list[i].temp.min)*10)/10 + " ℃";	// 最低気温
+		var icon = "<img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'>";	// お天気アイコン
+		tag += "<tr>";
+		tag += "<td>" + day[i] + "</td>";
+		tag += "<td>" + icon + "</td>";
+		tag += "<td>最高</td><td>" + tempMax + "</td>";
+		tag += "<td>最低</td><td>" + tempMin + "</td>";
+		tag += "</tr>";
+	}
+	tag += "</table>";
+
+	var result = document.getElementById("result");
+	result.innerHTML = tag;
+}
+httpObj.send(null);
+
+</script>
+</head>
+
+<body>
+<h1>お天気情報取得</h1>
+<div id="result">Getting weather...</div>
+</body>
+</html>
