@@ -28,6 +28,16 @@ body {
   border: 1px solid black;
 }
 
+.timerID {
+  margin-right: 20px;
+  background-color: white;
+  width: auto;
+  padding: 30px, 30px;
+  text-align: center;
+  height: 80px;
+  /*height: 80px;*/
+  border: 1px solid black;
+}
 
 
 .side-title {

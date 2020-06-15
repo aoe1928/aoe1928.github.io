@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <link rel="stylesheet" href="calc.css">
     <link rel="script" href="clock.js">
+    <link rel="script" href="/Scripts/time.js">
 </head>
 
 <body>
@@ -26,8 +27,42 @@
 
         <div class="tokyo-weather">
           <p class="side-title">東京</p>
-          <script type="weatherTokyo" src="weatherTokyo.js">
+          <input name="counter" type="text" size="10">
+          <script href="weatherTokyo.js">
 
+          </script>
+
+        </div>
+        <div class="timerID">
+          <script href="./Scripts/time.js">
+          <form name="form_count"><input name="counter" type="text" size="10"></form>
+
+<script type="text/javascript">
+<!--
+count = 0;
+timerID = setInterval('countup()',1000);
+
+function countup() {
+count++;
+document.form_count.counter.value =count_format(count,0); //書式を整えて表示
+}
+
+function count_format(sec,fix) {
+//sec=秒数 fix=小数桁数
+var ts = sec.toFixed(fix); //小数点以下の調整 (*1)
+var tm = Math.floor(ts / 60); //秒数切り捨て (*2)
+ts = ts % 60; //60秒未満の秒数 (*3)
+var th = Math.floor(tm / 60); //分の切り捨て (*4)
+tm = tm % 60; //60分未満の分数 (*5)
+//表示の整形 (*6)
+if (ts < 10) ts = "0" + ts;
+if (tm < 10) tm = "0" + tm;
+if (th < 10) th = "0" + th;
+return th + ":" + tm + ":" + ts; //文字列を返す (*7)
+}
+-->
+</script>
+解説
           </script>
         </div>
 
@@ -48,11 +83,15 @@
   </div>
   <div class="mami-box">
     <p>今日は何をしようかな？</p>
-    <p>vim環境いれよう</p>
+    <p>素朴なJS、NodeJSでやることをはっきり考えたいのう</p>
+    <p>アメダスAPIは考えたい</p>
+    <p>ストップウィッチは欲しいよね</p>
     <p>いろいろなすこを集めよう</p>
     <p>this is a test from mac terminal nanoda!!</p>
     <!--<p>https://qiita.com/colorrabbit/items/755cfbb0e97d48280775</p>-->
 	<a href="https://qiita.com/colorrabbit/items/755cfbb0e97d48280775">vimのコマンド</a>
+  <a href="https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions">nodejs</a>
+  <a href="https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions">gitHubnodeJSpage</a>
   </div>
 
   <div class="calcDesu">
