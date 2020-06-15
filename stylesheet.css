@@ -19,12 +19,12 @@ body {
 }
 
 .gadgett {
-  margin-left: 0px;
+  margin-right: 20px;
   background-color: white;
+  width: auto;
   padding: 30px, 30px;
   text-align: center;
   /*height: 80px;*/
-  width: 15%;
   border: 1px solid black;
 }
 
@@ -71,7 +71,7 @@ body {
   float: left;
   padding-left: 20px;
   height: 100px;
-  width:auto;
+  width: auto;
 }
 
 .mami-box {
@@ -80,9 +80,10 @@ body {
   top: 50px;
   left: 10%;
   background-color: white;
-  height: 200px;
+  height: 350px;
   width: 50%;
   border: 1px solid black;
+  margin-bottom: 30px;
 }
 
 .mami-box p {
@@ -90,8 +91,14 @@ body {
   padding-left: 20px;
 }
 
+.mami-box a {
+  padding-left: 30px;
+}
+
 .calcDesu {
-  clear: both;
+  /*clear: both;*/
+  float: left;
+  margin-left: 150px;
   margin-top: 80px;
   margin-bottom: 30px;
 }
