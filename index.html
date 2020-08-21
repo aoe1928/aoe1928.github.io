@@ -13,87 +13,23 @@
 <body>
 
 <div class="side">
-
   <div class="darkbox">
-      <div>
-        <p class="side-title">Time</p>
-        <div class="gadgett">
-            <!-- Date -->
-          <div id="clock_date"></div>
-              <!-- Time -->
-          <div id="clock_time"></div>
-            <script type="text/javascript" src="clock.js"></script>
-        </div>
-
-        <div class="tokyo-weather">
-          <p class="side-title">東京</p>
-          <input name="counter" type="text" size="10">
-          <script href="weatherTokyo.js">
-
-          </script>
-
-        </div>
-        <div class="timerID">
-          <script href="./Scripts/time.js">
-          <form name="form_count"><input name="counter" type="text" size="10"></form>
-
-<script type="text/javascript">
-<!--
-count = 0;
-timerID = setInterval('countup()',1000);
-
-function countup() {
-count++;
-document.form_count.counter.value =count_format(count,0); //書式を整えて表示
-}
-
-function count_format(sec,fix) {
-//sec=秒数 fix=小数桁数
-var ts = sec.toFixed(fix); //小数点以下の調整 (*1)
-var tm = Math.floor(ts / 60); //秒数切り捨て (*2)
-ts = ts % 60; //60秒未満の秒数 (*3)
-var th = Math.floor(tm / 60); //分の切り捨て (*4)
-tm = tm % 60; //60分未満の分数 (*5)
-//表示の整形 (*6)
-if (ts < 10) ts = "0" + ts;
-if (tm < 10) tm = "0" + tm;
-if (th < 10) th = "0" + th;
-return th + ":" + tm + ":" + ts; //文字列を返す (*7)
-}
--->
-</script>
-解説
-          </script>
-        </div>
-
+    <div>
+      <p class="side-title">Time</p>
+    </div>
+    <div>
+      <script src="clock.js" type="text/javascript"></script>
+      <div class="clock">
+        <div id="clock_date"></div>
+        <div id="clock_time"></div>
       </div>
-  </div>
-</div>
+      <div class="qbimg">
+        <img src="QB.png" alt="">
+      </div>
 
-<div class="main">
-  <div class="mami">
-    <h1>mamisankawaii</h1>
-    <p>    ξ(✿ ＞◡❛)ξ▄︻▇▇〓〓ティロ・フィナーレ！</p>
-    <div class="qbimg">
-      <img src="QB.png" alt="">
-    </div>
-    <div class="qbimg">
-      <img src="img_01.png" alt="">
+
     </div>
   </div>
-  <div class="mami-box">
-    <p>今日は何をしようかな？</p>
-    <p>素朴なJS、NodeJSでやることをはっきり考えたいのう</p>
-    <p>アメダスAPIは考えたい</p>
-    <p>ストップウィッチは欲しいよね</p>
-    <p>いろいろなすこを集めよう</p>
-    <p>this is a test from mac terminal nanoda!!</p>
-    <!--<p>https://qiita.com/colorrabbit/items/755cfbb0e97d48280775</p>-->
-	<a href="https://qiita.com/colorrabbit/items/755cfbb0e97d48280775">vimのコマンド</a>
-  <a href="https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions">nodejs</a>
-  <a href="https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions">gitHubnodeJSpage</a>
-  </div>
-
   <div class="calcDesu">
     <div class = "container">
 <!--      計算結果を出力する場所-->
@@ -136,6 +72,35 @@ return th + ":" + tm + ":" + ts; //文字列を返す (*7)
     </div>
     <script src="calc.js"></script>
   </div>
+</div>
+
+<div class="main">
+  <div class="mami">
+    <h1>mamisankawaii</h1>
+    <p>    ξ(✿ ＞◡❛)ξ▄︻▇▇〓〓  aoe1928のページ</p>
+  </div>
+  <div class="mami-box">
+    <h2>自己紹介</h2>
+    <p>aoe1928のページです</p>
+    <p>作曲とかプログラミングとかします</p>
+    <!--<p>https://qiita.com/colorrabbit/items/755cfbb0e97d48280775</p>-->
+    <a href="https://note.com/aoe1928/n/n525c6b1c4717">作曲した曲</a>
+  </div>
+  <div class="mami-box">
+    <p>関東の気温なう</p>
+
+  </div>
+
+  <script src="jmaKanto.js" type="text/javascript">
+
+  </script>
+  <img id="jmaKanto" class="jma" src="" usemap="#kanto" alt="https://www.jma.go.jp/jp/amedas/imgs/temp/206/202008211100-00.png">
+
+  <div class="mami-box">
+    <p>これからこのページもぼちぼち盛り上げていきます</p>
+  </div>
+
+
   <div class="thankYou">
     <div class="mami-box">
       <p>参考にさせて頂きました</p>
