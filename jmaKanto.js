@@ -1,6 +1,7 @@
 // <img id="image" class="img_place" src="https://www.jma.go.jp/jp/amedas/imgs/temp/206/202008211100-00.png" usemap="#kanto">
 window.onload = function onLoad() {
     var linkJma = document.getElementById("jmaKanto");
+    alert(0);
     var src = jmaKanto.getAttribute('src');
     var twoDigit =function(num){
       　     var digit
