@@ -19,6 +19,7 @@ window.onload = function onLoad() {
     }
     var min = "00";
     var link = year + month+ day + hour + min;
+    
     linkJma.setAttribute('src', 'https://www.jma.go.jp/jp/amedas/imgs/temp/206/' + link + '-00.png');
     // alert(link);
 }
